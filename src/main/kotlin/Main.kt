@@ -4,7 +4,7 @@ import java.util.stream.Collectors
 
 
 fun main() {
-    exercicio12()
+    exercicio16()
 }
 
 
@@ -155,3 +155,42 @@ fun exercicio12() {
     println(resultadopessoas)
 }
 
+fun exercicio13() {
+    //Exercício 1: Imprimir Elementos de uma Lista
+    //Crie uma lista de strings com os nomes de frutas (por exemplo, "Maçã", "Banana", "Laranja") e use o forEach para imprimir cada fruta.
+
+    var frutas = listOf("Maça", "Banana", "Laranja")
+    frutas.forEach{println(it)}
+}
+
+fun exercicio14(){
+    //Exercício 2: Somar Números de uma Lista
+    //Crie uma lista de números inteiros e use o forEach para calcular a soma de todos os números. Imprima o resultado.
+    //
+    //Dica: Use uma variável acumuladora (var soma = 0) para armazenar a soma durante a iteração.
+
+    val numeros = listOf(1, 2, 3, 4, 5)
+    var soma = 0
+    numeros.forEach { num ->
+        soma += num
+    }
+    println(soma)
+}
+
+fun exercicio15(){
+    //Exercício 3: Filtrar Números Pares
+    //Crie uma lista de números inteiros e use o forEach para imprimir apenas os números pares.
+
+    val numeros = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    val pares = numeros.filter { it % 2 == 0 }
+    pares.forEach { println(it) }
+}
+
+fun exercicio16(){
+    //Exercício 4: Transformar Elementos de uma Lista
+    //Crie uma lista de strings com palavras em minúsculas e use o forEach para imprimir cada palavra em maiúsculas.
+
+    val palavras = listOf("kotlin", "java", "programação", "android")
+    val palavrasM = palavras.map { it.uppercase() }
+    palavrasM.forEach { println(it) }
+}
