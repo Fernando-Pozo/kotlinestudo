@@ -4,7 +4,7 @@ import java.util.stream.Collectors
 
 
 fun main() {
-    exercicio16()
+    exercicio29()
 }
 
 
@@ -159,7 +159,7 @@ fun exercicio13() {
     //Exercício 1: Imprimir Elementos de uma Lista
     //Crie uma lista de strings com os nomes de frutas (por exemplo, "Maçã", "Banana", "Laranja") e use o forEach para imprimir cada fruta.
 
-    var frutas = listOf("Maça", "Banana", "Laranja")
+    val frutas = listOf("Maça", "Banana", "Laranja")
     frutas.forEach{println(it)}
 }
 
@@ -194,3 +194,121 @@ fun exercicio16(){
     val palavrasM = palavras.map { it.uppercase() }
     palavrasM.forEach { println(it) }
 }
+
+fun exercicio17() {
+    // Exercício 1: Soma dos Números
+    // Crie uma lista de números inteiros e use o reduce para calcular a soma de todos os números. Imprima o resultado.
+    val numeros = listOf(1, 2, 3, 4, 5)
+    val resultados = numeros.reduce { acumulador, num ->
+        acumulador + num
+    }
+    println(resultados)
+}
+
+fun exercicio18() {
+    // Exercício 2: Produto dos Números
+    // Crie uma lista de números inteiros e use o reduce para calcular o produto de todos os números. Imprima o resultado.
+    val numeros = listOf(1, 2, 3, 4, 5)
+    val resultado = numeros.reduce{acumulador, num ->
+        acumulador * num
+    }
+    println(resultado)
+}
+
+fun exercicio19() {
+    // Exercício 3: Maior Número
+    // Use o reduce para encontrar o maior número em uma lista de inteiros. Imprima o resultado.
+    val numeros = listOf(10, 25, 8, 99, 32)
+    val resultado = numeros.reduce{acumulador, num ->
+        if (num > acumulador) num else acumulador
+    }
+    println(resultado)
+}
+
+fun exercicio20() {
+    // Exercício 4: Concatenação de Strings
+    // Crie uma lista de palavras e use o reduce para concatená-las em uma única string separada por espaços.
+    val palavras = listOf("Kotlin", "é", "uma", "linguagem", "fantástica")
+    val resultado = palavras.reduce{frase, palavra ->
+        frase + " " + palavra
+    }
+    println(resultado)
+}
+
+fun exercicio21() {
+    // Exercício 5: Soma dos Quadrados
+    // Use o fold para calcular a soma dos quadrados dos números em uma lista de inteiros. Imprima o resultado.
+    val numeros = listOf(1, 2, 3, 4, 5)
+    val resultado = numeros.fold(0){acumulador, num ->
+        acumulador + (num * num)
+    }
+    println(resultado)
+}
+
+fun exercicio22() {
+    // Exercício 6: Contagem de Caracteres
+    // Use o fold para contar o total de caracteres em uma lista de palavras. Imprima o resultado.
+    val palavras = listOf("Kotlin", "é", "top")
+    val resultado = palavras.fold(0){contador, i ->
+        contador + i.length
+    }
+    println(resultado)
+}
+
+fun exercicio23() {
+    // Exercício 1: Contar números maiores que 10
+    // Dada uma lista de números inteiros, use count() para contar quantos são maiores que 10.
+    val numeros = listOf(5, 12, 8, 20, 15, 3)
+    val resultado = numeros.count{it > 10}
+    println(resultado)
+}
+
+fun exercicio24() {
+    // Exercício 2: Contar palavras com mais de 5 letras
+    // Dada uma lista de palavras, use count() para contar quantas possuem mais de 5 letras.
+    val palavras = listOf("Kotlin", "Java", "Python", "Go", "JavaScript")
+    val resultado = palavras.count{it.length > 5}
+    println(resultado)
+}
+
+fun exercicio25() {
+    // Exercício 3: Contar ocorrências de um número específico
+    // Dada uma lista de números, use count() para contar quantas vezes o número 3 aparece.
+    val numeros = listOf(3, 7, 3, 9, 3, 5, 3)
+    val resultado = numeros.count{it == 3}
+    println(resultado)
+}
+
+fun exercicio26() {
+    // Exercício 4: Contar elementos únicos
+    // Use count() junto com distinct() para contar quantos números distintos existem na lista.
+    val numeros = listOf(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
+    val resultado = numeros.distinct().count()
+    println(resultado)
+}
+
+fun exercicio27() {
+    // Exercício 1: Soma de números inteiros
+    // Dada uma lista de inteiros, use sum() para calcular a soma total.
+    val numeros = listOf(10, 20, 30, 40, 50)
+    val resultado = numeros.sum()
+    println(resultado)
+}
+
+fun exercicio28() {
+    // Exercício 2: Soma de números pares
+    // Use sumOf() para somar apenas os números pares de uma lista.
+    val numeros = listOf(1, 2, 3, 4, 5, 6, 7, 8)
+    val resultado = numeros.sumOf { if (it % 2 == 0) it else  0}
+    println(resultado)
+}
+
+fun exercicio29() {
+    // Exercício 4: Soma dos quadrados dos números
+    // Use sumOf() para calcular a soma dos quadrados de uma lista de números.
+    val numeros = listOf(1, 2, 3, 4, 5)
+    val resultado = numeros.sumOf { (it * it) }
+    println(resultado)
+
+}
+
