@@ -4,7 +4,7 @@ import java.util.stream.Collectors
 
 
 fun main() {
-    exercicio29()
+    exercicio33()
 }
 
 
@@ -105,11 +105,10 @@ fun exercicio9() {
     println(resultado)
 }
 
-data class Produto(val id: Int, val nome: String)
 fun exercicio10() {
     //🔟Exercício com objetos e distinct()
     //Objetivo: Dada uma lista de objetos Produto, remova os produtos duplicados com base na comparação de todos os atributos (usando distinct()).
-
+    data class Produto(val id: Int, val nome: String)
     val produtos = listOf(
         Produto(1, "Produto A"),
         Produto(2, "Produto B"),
@@ -312,3 +311,60 @@ fun exercicio29() {
 
 }
 
+fun exercicio30() {
+    // Exercício 1: Média de números inteiros
+    // Dada uma lista de inteiros, use average() para calcular a média.
+    val numeros = listOf(10, 20, 30, 40, 50)
+    val resultado = numeros.average()
+    println(resultado)
+}
+
+
+fun exercicio31() {
+    // Exercício 2: Média dos números maiores que 10
+    // Dada uma lista de números, calcule a média apenas dos números maiores que 10.
+    val numeros = listOf(5, 12, 8, 20, 15, 3)
+    val resultado = numeros.filter { it > 10 }.average()
+    println(resultado)
+}
+
+fun exercicio32() {
+    // Exercício 1: Encontrar o menor número
+    // Dada uma lista de números, use minOrNull() para encontrar o menor número.
+    val numeros = listOf(12, 5, 8, 20, 15)
+    val resultado = numeros.minOrNull()
+    println(resultado)
+}
+
+fun exercicio33() {
+    // Exercício 2: Produto com menor preço
+    // Crie uma classe Produto(nome, preco) e use minByOrNull() para encontrar o produto com menor preço.
+    data class Produto(val nome: String, val preco: Double)
+    val produtos = listOf(
+        Produto("Produto A", 500.0),
+        Produto("Produto B", 300.0),
+        Produto("Produto C", 150.0)
+    )
+    val resultado = produtos.minByOrNull { it.preco }
+    println(resultado)
+}
+fun exercicio34() {
+    // Exercício 1: Encontrar o maior número
+    // Dada uma lista de números, use maxOrNull() para encontrar o maior número.
+    val numeros = listOf(12, 5, 8, 20, 15)
+    val resultado = numeros.maxOrNull()
+    println(resultado)
+}
+
+fun exercicio35() {
+    // Exercício 2: Produto com maior preço
+    // Crie uma classe Produto(nome, preco) e use maxByOrNull() para encontrar o produto mais caro.
+    data class Produto(val nome: String, val preco: Double)
+    val produtos = listOf(
+        Produto("Produto A", 500.0),
+        Produto("Produto B", 300.0),
+        Produto("Produto C", 150.0)
+    )
+    val resultado = produtos.maxByOrNull { it.preco }
+    println(resultado)
+}
