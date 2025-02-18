@@ -4,7 +4,7 @@ import java.util.stream.Collectors
 
 
 fun main() {
-    exercicio33()
+    exercicio42()
 }
 
 
@@ -368,3 +368,61 @@ fun exercicio35() {
     val resultado = produtos.maxByOrNull { it.preco }
     println(resultado)
 }
+
+fun exercicio36() {
+    // Exercício 1: Agrupar números em pares e ímpares
+    // Dada uma lista de números, use groupBy para separá-los em pares e ímpares.
+    val numeros = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    val resp = numeros.groupBy { it % 2 == 0 }
+    println(resp)
+}
+
+fun exercicio37() {
+    // Exercício 2: Agrupar palavras por tamanho
+    // Dada uma lista de palavras, use groupBy para agrupá-las pelo número de caracteres.
+    val palavras = listOf("kotlin", "java", "python", "go", "rust", "swift")
+    val resp = palavras.groupBy { it.length }
+    println(resp)
+}
+
+fun exercicio38() {
+    // Exercício 4: Separar aprovados e reprovados
+    // Dada uma lista de notas, use partition para separar os alunos aprovados (>= 7) e reprovados.
+    val notas = listOf(5.0, 7.5, 8.0, 6.5, 9.0, 4.0, 7.0, 3.5)
+    val (aprovados, reprovados) = notas.partition {it >= 5 }
+    println(aprovados)
+    println(reprovados)
+}
+
+fun exercicio39() {
+    // Exercício 5: Separar números negativos e positivos
+    // Dada uma lista de números, use partition para separá-los em positivos e negativos.
+    val numeros = listOf(-10, -5, 0, 3, 7, -2, 8, -1)
+    val (positivo, negativo) = numeros.partition { it > 0 }
+    println(positivo)
+    println(negativo)
+}
+fun exercicio40() {
+    // Exercício 6: Criar uma string com os nomes separados por vírgula
+    // Dada uma lista de nomes, use joinToString para criar uma string formatada.
+    val nomes = listOf("Ana", "Carlos", "Beatriz", "Daniel", "Eduarda")
+    val resp = nomes.joinToString(separator = ", ")
+    println(resp)
+}
+
+fun exercicio41() {
+    // Exercício 8: Eliminar números repetidos
+    // Dada uma lista com números repetidos, use toSet para remover duplicatas.
+    val numeros = listOf(1, 2, 3, 4, 3, 2, 1, 5, 6, 5)
+    val resp = numeros.toSet()
+    println(resp)
+}
+
+fun exercicio42() {
+    // Exercício 9: Criar um conjunto de letras únicas
+    // Dada uma string, use toSet para obter as letras únicas da palavra.
+    val palavra = "banana"
+    val resp = palavra.toSet()
+    println(resp)
+}
+
