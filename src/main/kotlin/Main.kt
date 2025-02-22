@@ -4,7 +4,10 @@ import java.util.stream.Collectors
 
 
 fun main() {
-    exercicio42()
+
+    val estrutura = estruturaDeDados()
+
+    estrutura.exercicio7()
 }
 
 
