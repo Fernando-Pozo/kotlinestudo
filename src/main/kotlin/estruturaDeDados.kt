@@ -63,6 +63,33 @@ class estruturaDeDados {
         println(resultado)
     }
 
+    //*******************************
+    // Exercicios de List
+    //*******************************
+
+    // 1️⃣ Crie uma lista com 5 nomes e imprima cada um deles.
+    fun exercicio8() {
+       var lista = listOf("brasil", "italia", "portugal", "espanha", "luxemburgo")
+        for (i in lista){
+            println(i)
+        }
+    }
+
+    // 2️⃣ Crie uma lista mutável de três cores e adicione uma nova cor. Depois, remova a primeira cor da lista.
+    fun exercicio9() {
+        val lista = mutableListOf("preto", "branco", "verde")
+        lista.add("azul")
+        lista.removeFirst()
+        lista.forEach{println(it)}
+    }
+
+    // 3️⃣ Verifique se um determinado número está presente em uma lista de números.
+    fun exercicio4() {
+        val numeros = listOf(1,2,2,2,3,3,4,4,5)
+        val resultado = numeros.contains(5)
+        println(resultado)
+    }
+
 }
 
 

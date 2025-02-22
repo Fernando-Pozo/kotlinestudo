@@ -7,7 +7,7 @@ fun main() {
 
     val estrutura = estruturaDeDados()
 
-    estrutura.exercicio7()
+    estrutura.exercicio4()
 }
 
 
