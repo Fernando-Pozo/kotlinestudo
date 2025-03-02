@@ -113,7 +113,7 @@ class estruturaDeDados {
     }
 
     //*******************************
-    // Exercicios de Mapa
+    // Exercicio de Mapa
     //*******************************
 
     // Crie um mapa onde as chaves sejam os nomes dos alunos e os valores sejam listas de notas. Depois, calcule a média de cada aluno..
@@ -131,6 +131,21 @@ class estruturaDeDados {
         println("$nome tem uma media $media")
         }
     }
+
+    //*******************************
+    // Exercicio de Arrays dinamico
+    //*******************************
+
+    //Crie um programa que preencha um ArrayList com uma lista de números inteiros pré-definidos.
+    // Em seguida, calcule e exiba a soma de todos os elementos do array.
+
+    fun exercicio14() {
+        val numeros = arrayListOf(5, 10, 15, 20)
+        val soma = numeros.sum()
+
+        println(soma)
+    }
+
 
 }
 
