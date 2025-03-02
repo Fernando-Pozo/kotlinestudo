@@ -6,8 +6,7 @@ import java.util.stream.Collectors
 fun main() {
 
     val estrutura = estruturaDeDados()
-
-    estrutura.exercicio4()
+    estrutura.exercicio13()
 }
 
 

@@ -84,10 +84,52 @@ class estruturaDeDados {
     }
 
     // 3️⃣ Verifique se um determinado número está presente em uma lista de números.
-    fun exercicio4() {
+    fun exercicio10() {
         val numeros = listOf(1,2,2,2,3,3,4,4,5)
         val resultado = numeros.contains(5)
         println(resultado)
+    }
+
+    //*******************************
+    // Exercicios de Conjuntos
+    //*******************************
+
+    //Crie uma função que receba uma lista de números inteiros e retorne um conjunto contendo apenas os valores únicos.
+    fun exercicio11() {
+        val lista = listOf(1, 2, 2, 3, 4, 4, 5)
+        val resultado = lista.toSet()
+        println(resultado)
+    }
+
+    //Crie uma função que receba dois conjuntos de números inteiros e retorne um novo conjunto contendo apenas os números que aparecem em ambos.
+    fun exercicio12() {
+        val conjuntoA = setOf(1, 2, 3, 4, 5)
+        val conjuntoB = setOf(3, 4, 5, 6, 7)
+
+        val intersecao = conjuntoA intersect conjuntoB
+
+        println(intersecao)
+
+    }
+
+    //*******************************
+    // Exercicios de Mapa
+    //*******************************
+
+    // Crie um mapa onde as chaves sejam os nomes dos alunos e os valores sejam listas de notas. Depois, calcule a média de cada aluno..
+
+    fun exercicio13() {
+        val alunos = mapOf(
+            "Ana" to listOf(8.0, 7.5, 9.0),
+            "Carlos" to listOf(6.5, 7.0, 5.5),
+            "Bruna" to listOf(9.0, 8.5, 10.0),
+            "Diego" to listOf(5.0, 6.0, 7.0)
+        )
+
+        for ((nome,notas) in alunos){
+            val media = notas.average()
+        println("$nome tem uma media $media")
+        }
     }
 
 }
