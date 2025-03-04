@@ -1,4 +1,4 @@
-package PadroesDeProjeto
+package PadroesDeProjeto.Singleton
 
 /*Singleton*/
 class ChessBoard private constructor() {
